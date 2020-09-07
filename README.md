@@ -1,66 +1,55 @@
-<img src="internals/img/erb-banner.png" width="100%" />
+# 可能是你见过最好用的switch host工具
 
-<br>
+## 痛点
+市面上的switch host 工具设置完虽然改变了系统的hosts, 但是因为chrome 有自己的dns cache的原因，这个缓存要在几分钟后才更新。要么等，要么新开隐身窗口（但是cookie会丢失），很影响工作节奏。于是用electron开发了这个带flush socket pools的switch host工具。
 
-<p>
-  Electron React Boilerplate uses <a href="https://electron.atom.io/">Electron</a>, <a href="https://facebook.github.io/react/">React</a>, <a href="https://github.com/reactjs/redux">Redux</a>, <a href="https://github.com/reactjs/react-router">React Router</a>, <a href="https://webpack.github.io/docs/">Webpack</a> and <a href="https://github.com/gaearon/react-hot-loader">React Hot Loader</a> for rapid application development (HMR).
-</p>
 
-<br>
+## 使用指南
+**工具目前只支持mac系统，浏览器必须是chrome**
 
-<hr />
-<br />
+只需三步：
 
-<div align="center">
+### 第一步：设置host文件修改权限
+sudo chmod 777 /etc/hosts
 
-</div>
+### 第二步：设置chrome权限
+Chrome，视图 -> 开发者 -> 允许Apple事件中的JavaScript
+![image.png](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91f1f795eddd46ce8a26e27989edc531~tplv-k3u1fbpfcp-zoom-1.image)
 
-<div align="center">
 
-![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif)
+### 第三步：安装工具
+↓↓↓安装包见最下面的版本信息↓↓↓
 
-</div>
+#### 添加host
+![330.jpg](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ddf45ad38544bffbef5f97e0855c0d5~tplv-k3u1fbpfcp-zoom-1.image)
 
-## Install
+#### 保存、开/关 host（和其他swith host 使用方式基本一致）
+保存、开/关 host的时候会写本地host文件，确认是否成功:
 
-- **If you have installation or compilation issues with this project, please see [our debugging guide](https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues/400)**
 
-First, clone the repo via git and install dependencies:
-
-```bash
-git clone --depth 1 --single-branch https://github.com/electron-react-boilerplate/electron-react-boilerplate.git your-project-name
-cd your-project-name
-yarn
+```javascript
+cat /etc/hosts
 ```
 
-## Starting Development
+Tips: 保存了才会持久化，不然再切过来就没了
 
-Start the app in the `dev` environment. This starts the renderer process in [**hot-module-replacement**](https://webpack.js.org/guides/hmr-react/) mode and starts a webpack dev server that sends hot updates to the renderer process:
+保存完，应用会自动去执行chorme的flush socket pools，第一次会有一个权限允许的提示，选同意。
+![333.jpg](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13674b25bdff437786eee5125593f684~tplv-k3u1fbpfcp-zoom-1.image)
 
-```bash
-yarn dev
-```
 
-## Packaging for Production
+### 注意事项
 
-To package apps for the local platform:
+- 使用时关闭其他的swith host工具，不然会有争抢权限的问题。如果出现这种情况导致的问题，关闭其他工具，重新 sudo chmod 777 /etc/hosts 即可
 
-```bash
-yarn package
-```
 
-## 修改应用名/版本信息等
-1. 修改./package.json的productName，build.productName
-2. 修改./app/package.json的version
+### 版本信息
+#### 1.3.0
+[Switch Host-Egg-1.3.0.dmg](https://github.com/fangwentian/switchhost/releases/tag/1.3.0)
+##### changelog:
 
-## Docs
+- 增加搜索功能 - command + F
+- 修改关闭的host不刷新chrome
+- 刷新chrome增加debounce为1.5秒，避免过多刷新
 
-See our [docs and guides here](https://electron-react-boilerplate.js.org/docs/installation)
 
-## Donations
 
-**Donations will ensure the following:**
-
-- 🔨 Long term maintenance of the project
-- 🛣 Progress on the [roadmap](https://electron-react-boilerplate.js.org/docs/roadmap)
-- 🐛 Quick responses to bug reports and help requests
