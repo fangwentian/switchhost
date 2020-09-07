@@ -1,0 +1,35 @@
+.wrap {
+    font-size: 16px;
+    color: #111;
+}
+
+.wrap>div {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.active {
+    background: #ccc;
+    color: #000;
+}
+.switch {
+    float: right;
+    margin-right: 5px;
+}
+.action {
+    margin: 10px;
+    font-size: 18px;
+}
+.oper:hover {
+    color: #F37327;
+}
+.oper {
+    color: #fff;
+    background-color: #1890ff;
+    text-align: center;
+}
+.icon {
+    margin-right: 7px;
+}

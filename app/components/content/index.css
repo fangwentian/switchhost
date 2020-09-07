@@ -1,0 +1,28 @@
+.content {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    height: 100vh !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #000 !important;
+}
+.content:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.content:hover {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

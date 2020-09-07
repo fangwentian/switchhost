@@ -1,0 +1,35 @@
+.container {
+  text-align: left;
+  display: flex;
+}
+
+.container h2 {
+  font-size: 5rem;
+}
+
+.container a {
+  font-size: 1.4rem;
+}
+
+.container .left {
+  width: 250px;
+  height: 100vh;
+  background-color: #f9f8f8;
+  opacity: 0.85;
+}
+
+.container .right {
+  flex: 1;
+  height: 100vh;
+  background-color: #fff;
+  opacity: 0.85;
+}
+.back {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(../timg.jpeg);
+}
