@@ -14,14 +14,14 @@ sudo chmod 777 /etc/hosts
 
 ### 第二步：设置chrome权限
 Chrome，视图 -> 开发者 -> 允许Apple事件中的JavaScript
-![image.png](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91f1f795eddd46ce8a26e27989edc531~tplv-k3u1fbpfcp-zoom-1.image)
+![image.png](https://img.alicdn.com/tfs/TB1sWKMT4D1gK0jSZFsXXbldVXa-497-344.png)
 
 
 ### 第三步：安装工具
 ↓↓↓安装包见最下面的版本信息↓↓↓
 
 #### 添加host
-![330.jpg](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ddf45ad38544bffbef5f97e0855c0d5~tplv-k3u1fbpfcp-zoom-1.image)
+![330.jpg](https://img.alicdn.com/tfs/TB1vxaPT1H2gK0jSZJnXXaT1FXa-2048-1456.jpg)
 
 #### 保存、开/关 host（和其他swith host 使用方式基本一致）
 保存、开/关 host的时候会写本地host文件，确认是否成功:
