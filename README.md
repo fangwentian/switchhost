@@ -14,6 +14,7 @@ sudo chmod 777 /etc/hosts
 
 ### 第二步：设置chrome权限
 Chrome，视图 -> 开发者 -> 允许Apple事件中的JavaScript
+
 ![image.png](https://img.alicdn.com/tfs/TB1sWKMT4D1gK0jSZFsXXbldVXa-497-344.png)
 
 
@@ -21,6 +22,7 @@ Chrome，视图 -> 开发者 -> 允许Apple事件中的JavaScript
 ↓↓↓安装包见最下面的版本信息↓↓↓
 
 #### 添加host
+
 ![330.jpg](https://img.alicdn.com/tfs/TB1vxaPT1H2gK0jSZJnXXaT1FXa-2048-1456.jpg)
 
 #### 保存、开/关 host（和其他swith host 使用方式基本一致）
@@ -34,7 +36,8 @@ cat /etc/hosts
 Tips: 保存了才会持久化，不然再切过来就没了
 
 保存完，应用会自动去执行chorme的flush socket pools，第一次会有一个权限允许的提示，选同意。
-![333.jpg](//p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13674b25bdff437786eee5125593f684~tplv-k3u1fbpfcp-zoom-1.image)
+
+![333.jpg](https://img.alicdn.com/tfs/TB1a61PT1H2gK0jSZJnXXaT1FXa-1581-465.jpg)
 
 
 ### 注意事项
