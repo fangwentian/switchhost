@@ -44,6 +44,7 @@ main.js
 main.js.map
 package-lock.json
 
+.vscode
 .idea
 npm-debug.log.*
 *.css.d.ts
